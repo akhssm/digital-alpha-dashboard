@@ -1,68 +1,196 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useState } from "react";
+
+import Header from "@/components/ui/Header";
+import Card from "@/components/ui/Card";
+import TransactionTable from "@/components/transactions/TransactionTable";
+
+import {
+  getCoinBalance,
+  getTransactions,
+  Transaction,
+} from "@/lib/api";
+
+interface CoinBalanceResponse {
+  balance: number;
+}
+
+interface TransactionResponse {
+  items: Transaction[];
+  total: number;
+  skip: number;
+  limit: number;
+}
 
 export default function Home() {
+  const [balance, setBalance] = useState<number>(0);
+
+  const [transactions, setTransactions] =
+    useState<Transaction[]>([]);
+
+  const [loading, setLoading] =
+    useState<boolean>(true);
+
+  const [transactionsLoading, setTransactionsLoading] =
+    useState<boolean>(true);
+
+  const [error, setError] =
+    useState<string>("");
+
+  const [transactionsError, setTransactionsError] =
+    useState<string>("");
+
+  // Load coin balance
+  useEffect(() => {
+    async function loadBalance(): Promise<void> {
+      try {
+        const data: CoinBalanceResponse =
+          await getCoinBalance();
+
+        setBalance(data.balance);
+      } catch (error: unknown) {
+        console.error(error);
+        setError("Unable to load coin balance");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadBalance();
+  }, []);
+
+  // Load transactions
+  useEffect(() => {
+    async function loadTransactions(): Promise<void> {
+      try {
+        setTransactionsLoading(true);
+
+        const data: TransactionResponse =
+          await getTransactions({
+            skip: 0,
+            limit: 10,
+          });
+
+        setTransactions(data.items);
+      } catch (error: unknown) {
+        console.error(error);
+
+        setTransactionsError(
+          "Unable to load transactions"
+        );
+      } finally {
+        setTransactionsLoading(false);
+      }
+    }
+
+    loadTransactions();
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <Header balance={balance} />
+
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        {/* Page heading */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900">
+            Financial Dashboard
+          </h2>
+
+          <p className="mt-1 text-sm text-gray-500">
+            Track your transactions, spending and rewards.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Summary cards */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+          {/* Reward Balance */}
+          <Card>
+            <p className="text-sm text-gray-500">
+              Reward Balance
+            </p>
+
+            <p className="mt-2 text-3xl font-bold text-gray-900">
+              {loading
+                ? "..."
+                : balance.toLocaleString()}
+            </p>
+
+            <p className="mt-1 text-xs text-gray-500">
+              Available coins
+            </p>
+          </Card>
+
+          {/* Transactions */}
+          <Card>
+            <p className="text-sm text-gray-500">
+              Transactions
+            </p>
+
+            <p className="mt-2 text-3xl font-bold text-gray-900">
+              {transactionsLoading
+                ? "..."
+                : transactions.length}
+            </p>
+
+            <p className="mt-1 text-xs text-gray-500">
+              Recent transactions
+            </p>
+          </Card>
+
+          {/* Total Spending */}
+          <Card>
+            <p className="text-sm text-gray-500">
+              Total Spending
+            </p>
+
+            <p className="mt-2 text-3xl font-bold text-gray-900">
+              ₹ —
+            </p>
+
+            <p className="mt-1 text-xs text-gray-500">
+              Analytics coming next
+            </p>
+          </Card>
         </div>
+
+        {/* Coin balance error */}
+        {error && (
+          <p className="mt-4 text-sm text-red-600">
+            {error}
+          </p>
+        )}
+
+        {/* Transaction error */}
+        {transactionsError && (
+          <p className="mt-4 text-sm text-red-600">
+            {transactionsError}
+          </p>
+        )}
+
+        {/* Transactions */}
+        <section className="mt-8">
+          {transactionsLoading ? (
+            <Card>
+              <p className="text-sm text-gray-500">
+                Loading transactions...
+              </p>
+            </Card>
+          ) : transactionsError ? (
+            <Card>
+              <p className="text-sm text-red-600">
+                {transactionsError}
+              </p>
+            </Card>
+          ) : (
+            <TransactionTable
+              transactions={transactions}
+            />
+          )}
+        </section>
       </main>
     </div>
   );
