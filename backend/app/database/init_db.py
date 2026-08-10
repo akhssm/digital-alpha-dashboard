@@ -1,5 +1,7 @@
 from app.database.connection import Base, engine
 from app.models.transaction import Transaction
+from app.models.reward import Reward
+from app.models.coin_balance import CoinBalance
 
 
 def init_db():
