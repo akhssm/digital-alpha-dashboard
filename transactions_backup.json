@@ -7295,7 +7295,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000000",
+    "id": "TXN2025000730",
     "timestamp": "2025-06-30T20:04:54Z",
     "merchant": "Hotstar",
     "category": "Entertainment",
@@ -20607,7 +20607,7 @@
     "payment_method": "Debit Card"
   },
   {
-    "id": "TXN20251000000001",
+    "id": "TXN2025000508",
     "timestamp": "2025-12-19",
     "merchant": "Myntra",
     "category": "Shopping",
@@ -24327,7 +24327,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000002",
+    "id": "TXN2025000846",
     "timestamp": "2025-09-07T00:01:13+05:30",
     "merchant": "PharmEasy",
     "category": "Health",
@@ -32736,7 +32736,7 @@
     "payment_method": "Debit Card"
   },
   {
-    "id": "TXN20251000000003",
+    "id": "TXN2025000371",
     "timestamp": "2026-03-05T13:15:05+05:30",
     "merchant": "Coursera",
     "category": "Education",
@@ -32866,7 +32866,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000004",
+    "id": "TXN2025002347",
     "timestamp": "22/08/2025 19:29:18",
     "merchant": "Myntra",
     "category": "Shopping",
@@ -39543,7 +39543,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000005",
+    "id": "TXN2025003956",
     "timestamp": "2025-08-22T13:43:47+05:30",
     "merchant": "Ola",
     "category": "Travel",
@@ -40493,7 +40493,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000006",
+    "id": "TXN2025004051",
     "timestamp": "2025-11-06T17:06:33Z",
     "merchant": "BPCL",
     "category": "Fuel",
@@ -49840,7 +49840,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000007",
+    "id": "TXN2025004986",
     "timestamp": "2025-10-25T09:31:57+05:30",
     "merchant": "IRCTC",
     "category": "Travel",
@@ -54198,7 +54198,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000008",
+    "id": "TXN2025005422",
     "timestamp": "2026-04-13T03:30:01Z",
     "merchant": "Unacademy",
     "category": "Education",
@@ -54808,7 +54808,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000009",
+    "id": "TXN2025003106",
     "timestamp": "2025-11-04T14:48:21+05:30",
     "merchant": "Amazon",
     "category": "Shopping",
@@ -55458,7 +55458,7 @@
     "payment_method": "Debit Card"
   },
   {
-    "id": "TXN20251000000010",
+    "id": "TXN2025005548",
     "timestamp": "2026-04-04T05:10:38Z",
     "merchant": "DMart",
     "category": "Groceries",
@@ -56997,7 +56997,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000011",
+    "id": "TXN2025005702",
     "timestamp": "2026-05-29T05:43:40Z",
     "merchant": "Cult.fit",
     "category": "Health",
@@ -57536,7 +57536,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000012",
+    "id": "TXN2025004546",
     "timestamp": "2025-12-28T02:09:43Z",
     "merchant": "Flipkart",
     "category": "Shopping",
@@ -60156,7 +60156,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000013",
+    "id": "TXN2025000533",
     "timestamp": "2025-10-05T11:29:30Z",
     "merchant": "Croma",
     "category": "Shopping",
@@ -66454,7 +66454,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000014",
+    "id": "TXN2025004974",
     "timestamp": "2025-10-30T23:12:27Z",
     "merchant": "Flipkart",
     "category": "Shopping",
@@ -66674,7 +66674,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000015",
+    "id": "TXN2025006109",
     "timestamp": "2025-11-14T19:30:14+05:30",
     "merchant": "BigBasket",
     "category": "Groceries",
@@ -68563,7 +68563,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000016",
+    "id": "TXN2025006859",
     "timestamp": "2026-04-28T11:46:30+05:30",
     "merchant": "BSES",
     "category": "Utilities",
@@ -68943,7 +68943,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000017",
+    "id": "TXN2025000336",
     "timestamp": "2026-03-26T15:35:30Z",
     "merchant": "McDonald's",
     "category": "Food & Dining",
@@ -69073,7 +69073,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000018",
+    "id": "TXN2025006910",
     "timestamp": 1765542458000,
     "merchant": "JioMart",
     "category": "Groceries",
@@ -69803,7 +69803,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000019",
+    "id": "TXN2025003957",
     "timestamp": 1763444960000,
     "merchant": "Myntra",
     "category": "Shopping",
@@ -71493,7 +71493,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000020",
+    "id": "TXN2025003330",
     "timestamp": "2026-06-11T00:02:38Z",
     "merchant": "YouTube Premium",
     "category": "Entertainment",
@@ -75628,7 +75628,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000021",
+    "id": "TXN2025003368",
     "timestamp": "2025-10-29T19:24:51+05:30",
     "merchant": "Spotify",
     "category": "Entertainment",
@@ -77876,7 +77876,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000022",
+    "id": "TXN2025007791",
     "timestamp": "2025-09-06T13:47:23Z",
     "merchant": "Nykaa",
     "category": "Shopping",
@@ -78126,7 +78126,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000023",
+    "id": "TXN2025007816",
     "timestamp": 1772733547000,
     "merchant": "BSES",
     "category": "Utilities",
@@ -79884,7 +79884,7 @@
     "payment_method": "Debit Card"
   },
   {
-    "id": "TXN20251000000024",
+    "id": "TXN2025004298",
     "timestamp": "2026-02-11T00:51:33Z",
     "merchant": "Hotstar",
     "category": "Entertainment",
@@ -83690,7 +83690,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000025",
+    "id": "TXN2025008373",
     "timestamp": "2025-08-21T18:28:24Z",
     "merchant": "IRCTC",
     "category": "Travel",
@@ -83839,7 +83839,7 @@
     "payment_method": "Debit Card"
   },
   {
-    "id": "TXN20251000000026",
+    "id": "TXN2025008388",
     "timestamp": "2026-06-12T16:13:13Z",
     "merchant": "DMart",
     "category": "Groceries",
@@ -84099,7 +84099,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000027",
+    "id": "TXN2025008414",
     "timestamp": "2026-05-05T12:22:03Z",
     "merchant": "ACT Fibernet",
     "category": "Utilities",
@@ -87617,7 +87617,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000028",
+    "id": "TXN2025004054",
     "timestamp": "2026-06-15T06:57:21Z",
     "merchant": "HP Petrol",
     "category": "Fuel",
@@ -92613,7 +92613,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000029",
+    "id": "TXN2025009266",
     "timestamp": "2025-10-28T13:52:15+05:30",
     "merchant": "Myntra",
     "category": "Shopping",
@@ -92723,7 +92723,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000030",
+    "id": "TXN2025009277",
     "timestamp": "2026-05-30",
     "merchant": "DMart",
     "category": "Groceries",
@@ -94331,7 +94331,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000031",
+    "id": "TXN2025009438",
     "timestamp": "2025-11-19T21:20:32+05:30",
     "merchant": "Domino's",
     "category": "Food & Dining",
@@ -94921,7 +94921,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000032",
+    "id": "TXN2025009497",
     "timestamp": "2026-02-12T02:23:35Z",
     "merchant": "DMart",
     "category": "Groceries",
@@ -96910,7 +96910,7 @@
     "payment_method": "Credit Card"
   },
   {
-    "id": "TXN20251000000033",
+    "id": "TXN2025004175",
     "timestamp": 1783907424000,
     "merchant": "BPCL",
     "category": "Fuel",
@@ -97870,7 +97870,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000034",
+    "id": "TXN2025009792",
     "timestamp": "2026-04-11T21:58:18+05:30",
     "merchant": "Jio",
     "category": "Utilities",
@@ -98070,7 +98070,7 @@
     "payment_method": "UPI"
   },
   {
-    "id": "TXN20251000000035",
+    "id": "TXN2025009812",
     "timestamp": "2025-10-11T14:38:05Z",
     "merchant": "Starbucks",
     "category": "Food & Dining",
@@ -98130,7 +98130,7 @@
     "payment_method": "Debit Card"
   },
   {
-    "id": "TXN20251000000036",
+    "id": "TXN2025003582",
     "timestamp": "2025-11-09T16:47:00Z",
     "merchant": "IndiGo",
     "category": "Travel",
@@ -98670,7 +98670,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000037",
+    "id": "TXN2025009872",
     "timestamp": "2025-11-15T03:56:37+05:30",
     "merchant": "Ola",
     "category": "Travel",
@@ -98880,7 +98880,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000038",
+    "id": "TXN2025005655",
     "timestamp": 1779686854000,
     "merchant": "ACT Fibernet",
     "category": "Utilities",
@@ -99020,7 +99020,7 @@
     "payment_method": "Netbanking"
   },
   {
-    "id": "TXN20251000000039",
+    "id": "TXN2025005746",
     "timestamp": "2025-11-14T05:25:26Z",
     "merchant": "BigBasket",
     "category": "Groceries",
